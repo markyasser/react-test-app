@@ -53,4 +53,4 @@ fi
 
 sudo apt install certbot
 sudo apt install python3-certbot-nginx
-sudo certbot --nginx -d react.switzerlandnorth.cloudapp.azure.com
+# sudo certbot --nginx -d react.switzerlandnorth.cloudapp.azure.com
