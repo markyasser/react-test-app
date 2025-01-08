@@ -49,8 +49,4 @@ if [ "$add_user" = "y" ]; then
   usermod -aG docker $USER
   echo "User $USER added to the Docker group. Log out and back in to apply changes."
 fi
-
-
-sudo apt install certbot
-sudo apt install python3-certbot-nginx
-# sudo certbot --nginx -d react.switzerlandnorth.cloudapp.azure.com
+sudo apt  install docker-compose -y

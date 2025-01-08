@@ -19,3 +19,12 @@ services:
       - ./build:/usr/share/nginx/html:ro
     depends_on:
       - react-app
+  certbot:
+      image: certbot/certbot:v2.9.0
+      volumes:
+        - ./certbot/conf:/etc/letsencrypt
+        - ./certbot/www:/var/www/certbot
+      environment:
+        - CERTBOT_EMAIL=markyasser2011@gmail.com
+        - CERTBOT_DOMAINS=react.switzerlandnorth.cloudapp.azure.com
+      command: certonly --webroot -w /var/www/certbot -d react.switzerlandnorth.cloudapp.azure.com --email markyasser2011@gmail.com --agree-tos --no-eff-email
